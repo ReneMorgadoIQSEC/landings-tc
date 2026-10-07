@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    #HERO BANNER
+\*------------------------------------*/
+
+// Posición del CTA relativa a la imagen: centrado a 24px del borde inferior sobre
+// 414 × 456 (móvil) y left 45px / top 376px sobre 1366 × 512 (desktop).
+.hero-banner {
+  position: relative;
+
+  &__media img {
+    width: 100%;
+    height: auto;
+
+    @include media('<tablet') {
+      aspect-ratio: 414 / 456;
+      object-fit: cover;
+    }
+  }
+
+  &__cta.button {
+    position: absolute;
+    bottom: 5.3%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media('>tablet') {
+      top: 73.4%;
+      bottom: auto;
+      left: 3.3%;
+      width: 288px;
+      transform: none;
+    }
+  }
+}

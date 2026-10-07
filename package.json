@@ -1,0 +1,22 @@
+{
+  "name": "landings-buen-fin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Servidor estático para las landings de Buen Fin",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "compression": "^1.8.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "railway": "^3.13.0"
+  }
+}

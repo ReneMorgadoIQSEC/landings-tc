@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing_8xl;
+  padding-bottom: $spacing_8xl;
+}

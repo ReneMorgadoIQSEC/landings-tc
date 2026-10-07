@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    #BENEFITS
+\*------------------------------------*/
+
+.benefits {
+  @include container($container_narrow);
+  display: flex;
+  flex-direction: column;
+  gap: $spacing_sm;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: $spacing_sm;
+    list-style: none;
+
+    @include media('>tablet') {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing_3xs;
+    padding: $spacing_sm;
+    border-radius: $radius_s;
+    background-color: $c_backgrounds_white;
+    text-align: center;
+  }
+
+  &__icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  &__title {
+    @include typography(semibold_B1);
+    color: $c_text_black_primary;
+  }
+
+  &__text {
+    @include typography(regular_B0);
+    color: $c_text_support;
+  }
+}

@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #SECTION TITLE
+\*------------------------------------*/
+
+.section-title {
+  @include typography(DS);
+  padding-inline: $spacing_sm;
+  color: $c_text_black_primary;
+  text-align: center;
+
+  @include media('>tablet') {
+    @include typography(DM);
+  }
+}

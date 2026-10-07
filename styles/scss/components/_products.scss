@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    #PRODUCTS
+\*------------------------------------*/
+
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing_lg;
+  scroll-margin-top: $spacing_sm;
+}

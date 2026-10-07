@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    #GLOBAL
+\*------------------------------------*/
+
+body {
+  font-family: $font_primary;
+  color: $c_text_black_primary;
+  background-color: $c_backgrounds_white;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+[hidden] {
+  display: none !important;
+}

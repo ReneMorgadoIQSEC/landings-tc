@@ -1,0 +1,75 @@
+/*------------------------------------*\
+    #ACCORDION
+\*------------------------------------*/
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing_sm;
+
+  @include media('>tablet') {
+    @include container($container_narrow, 0px);
+  }
+
+  &__item {
+    border-bottom: 1px solid $c_tools_divider;
+
+    &[open] {
+      background-color: $c_backgrounds_mi_telcel;
+    }
+  }
+
+  &__summary {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing_sm;
+    min-height: 56px;
+    padding: $spacing_sm;
+    color: $c_text_black_primary;
+    list-style: none;
+    cursor: pointer;
+    @include typography(semibold_B1);
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $c_tools_focus;
+      outline-offset: -2px;
+    }
+  }
+
+  &__item[open] &__summary {
+    padding-bottom: $spacing_lg;
+  }
+
+  &__question {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+
+    &--open {
+      display: none;
+    }
+  }
+
+  &__item[open] &__icon {
+    &--open {
+      display: block;
+    }
+
+    &--closed {
+      display: none;
+    }
+  }
+
+  &__answer {
+    padding: 0 $spacing_sm $spacing_sm;
+    color: $c_text_black_primary;
+    @include typography(regular_B1);
+  }
+}

@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+
+.site-header {
+  position: relative;
+  z-index: 2;
+  background-color: $c_backgrounds_navbar_telcel;
+  box-shadow: $level_1;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding: $spacing_sm;
+
+    @include media('>tablet') {
+      @include container($container_narrow);
+      padding-inline: 0;
+    }
+  }
+
+  &__logo img {
+    width: 112px;
+    height: 32px;
+  }
+}

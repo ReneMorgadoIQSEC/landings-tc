@@ -1,0 +1,188 @@
+/*------------------------------------*\
+    #PRODUCT CARD
+\*------------------------------------*/
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing_sm;
+  width: 320px;
+  max-width: 100%;
+  padding: $spacing_sm;
+  background-color: $c_backgrounds_white;
+  border: 1px solid $c_tools_divider;
+  border-radius: $radius_s;
+
+  &__body {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing_3xs;
+  }
+
+  &__media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: $spacing_2xs;
+    flex-shrink: 0;
+    min-height: 169px;
+  }
+
+  &__visual {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing_2xs;
+  }
+
+  &__image {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+  }
+
+  &__swatches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $spacing_2xs;
+    max-width: 110px;
+    list-style: none;
+  }
+
+  &__swatch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 1px;
+    border-radius: 50%;
+    background-color: $c_backgrounds_blue_bright;
+    background-clip: content-box;
+
+    &::after {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: var(--swatch-color);
+    }
+
+    &--selected {
+      padding: 0;
+      border: 1px solid $c_button_tertiary_select;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: $spacing_2xs;
+    min-width: 0;
+    height: 308px;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing_2xs;
+    height: 110px;
+  }
+
+  &__brand {
+    @include typography(semibold_SD);
+    width: 100%;
+    overflow: hidden;
+    color: $c_text_support;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__name {
+    @include typography(H);
+    color: $c_text_black_primary;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__capacity {
+    opacity: 0.52;
+  }
+
+  &__divider {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    border-top: 1px solid $c_tools_divider;
+  }
+
+  &__pricing {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing_2xs;
+  }
+
+  &__label,
+  &__old-price {
+    @include typography(regular_B0);
+    color: $c_text_support;
+  }
+
+  &__prices {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing_3xs;
+  }
+
+  &__price {
+    @include typography(H);
+    color: $c_text_highlight;
+  }
+
+  &__installments {
+    @include typography(regular_SD);
+    color: $c_text_support;
+  }
+
+  &__perks {
+    display: flex;
+    gap: $spacing_2xs;
+    list-style: none;
+  }
+
+  &__perk {
+    display: flex;
+    align-items: center;
+    gap: $spacing_3xs;
+    @include typography(semibold_SD);
+
+    &--gift {
+      color: $c_icon_success_primary;
+    }
+
+    &--shipping {
+      color: $c_tag_informativo_text;
+    }
+  }
+
+  &__footer,
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing_sm;
+  }
+
+  &__actions {
+    align-items: center;
+  }
+
+  &__cta.button {
+    width: 248px;
+  }
+}

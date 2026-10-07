@@ -1,0 +1,170 @@
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+/**
+ * Button and submit inputs reset
+ * 1) These should be styled using c-btn
+ */
+button {
+  cursor: pointer;
+}
+
+.button, .tc-cta {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2px;
+  padding: $spacing_3xs $spacing_sm;
+  border-radius: 60px;
+  min-height: 40px;
+  width: 100%;
+  min-width: fit-content;
+  width: 180px;
+  max-width: 100%;
+  cursor: pointer;
+
+  @include media('>tablet') {
+    width: 248px;
+    padding: $spacing_2xs $spacing_sm;
+  }
+
+  &.button--small {
+    width: fit-content;
+    max-width: none;
+    padding: $spacing_2xs $spacing_2xs;
+    height: fit-content;
+  }
+
+  @each $type,
+  $styles in $buttons {
+    &.button__#{$type}, &.tc-cta--#{$type} {
+      background-color: map-get($styles, background);
+      border: 1px solid map-get($styles, border);
+      color: map-get($styles, color);
+      text-decoration: none;
+      @include typography(CTA);
+
+      &:hover {
+        background-color: map-get($styles, hover);
+        border: 1px solid map-get($styles, border-hover);
+      }
+
+      &.outlined {
+        background-color: map-get($styles, background-outlined);
+        border: 1px solid map-get($styles, border-outlined);
+        color: map-get($styles, color-outlined);
+
+        &:hover {
+          background-color: map-get($styles, hover-outlined);
+          border: 1px solid map-get($styles, border-hover-outlined);
+        }
+      }
+
+      &.disabled {
+        background-color: map-get($styles, background-disabled);
+        border: 1px solid map-get($styles, border-disabled);
+        color: map-get($styles, color-disabled);
+      }
+    }
+  }
+
+  &.button__link, &.tc-cta--link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    height: fit-content;
+    border-radius: 0;
+    border: none;
+    background: transparent !important;
+    text-decoration: none;
+    color: $c_text_primary_textlink !important;
+    gap: $spacing_3xs;
+    @include typography(CTA);
+
+    &--small {
+      @include typography(semibold_B0)
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+    &.tc-space-link{
+        padding-top: $spacing_sm !important;
+    }
+    >img{
+      vertical-align: middle;
+    }
+  }
+
+  &__search {
+    background-color: $c_backgrounds_blue_baby;
+    border: none;
+    color: $c_text_primary_textlink;
+    height: $spacing_2xl;
+    padding: $spacing_2xs $spacing_sm;
+    border: none;
+    width: fit-content;
+    @include typography(semibold_B2);
+
+    &.disabled {
+      background-color: $c_button_primary_disabled;
+      border: none;
+      color: $c_button_primary__textdisabled;
+    }
+  }
+}
+
+.tc-cta-container {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+
+  &.tc-cta-container_center {
+    justify-content: center;
+  }
+
+  .icon-loader {
+    display: none;
+  }
+
+  &.show-loader {
+    .icon-loader {
+      position: absolute;
+      display: block;
+      top: 8px;
+      animation: spin 1s linear infinite;
+      color: $c_button_alert_textprimary;
+    }
+    .button{
+      color: transparent !important;
+      pointer-events: none;
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+.tc-btn_with_link{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing_sm;
+
+    &.tc-cta-container_center {
+      align-items: center;
+    }
+}

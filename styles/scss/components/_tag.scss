@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    #TAG
+\*------------------------------------*/
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing_2xs;
+  min-height: 24px;
+  padding: 2px $spacing_xs;
+  border-radius: $radius_3xs;
+  white-space: nowrap;
+  @include typography(semibold_SD);
+
+  @each $type, $styles in $tags {
+    &--#{$type} {
+      background-color: map-get($styles, background);
+      color: map-get($styles, color);
+      border: map-get($styles, border);
+    }
+  }
+}

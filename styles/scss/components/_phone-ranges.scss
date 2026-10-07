@@ -1,0 +1,97 @@
+/*------------------------------------*\
+    #PHONE RANGES
+\*------------------------------------*/
+
+.phone-ranges {
+  @include container($container_wide);
+  display: flex;
+  flex-direction: column;
+  gap: $spacing_sm;
+
+  @include media('>tablet') {
+    flex-direction: row;
+  }
+
+  &__card {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing_sm;
+    height: 400px;
+    padding: $spacing_lg;
+    overflow: hidden;
+    border-radius: $radius_s;
+    color: $c_text_white_secondary;
+    text-align: center;
+
+    @include media('>tablet') {
+      flex: 1;
+    }
+
+    &--low {
+      padding-inline: $spacing_sm;
+      background: linear-gradient(
+        to top,
+        color-mix(in srgb, #{$c_backgrounds_blue_telcel} 75%, transparent),
+        #{$c_backgrounds_blue_telcel}
+      );
+
+      @include media('>tablet') {
+        padding-inline: $spacing_lg;
+      }
+    }
+  }
+
+  &__picture,
+  &__background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  &__background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__card--low &__background {
+    @include media('<tablet') {
+      top: 182px;
+      left: 50%;
+      width: 300px;
+      height: 300px;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing_2xs;
+    width: 100%;
+  }
+
+  &__title {
+    @include typography(H1);
+
+    @include media('>tablet') {
+      @include typography(DS);
+    }
+  }
+
+  &__subtitle {
+    @include typography(regular_B2);
+
+    @include media('>tablet') {
+      @include typography(H0);
+      font-weight: $fontWeight_regular;
+    }
+  }
+
+  &__cta.button {
+    width: 248px;
+  }
+}

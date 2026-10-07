@@ -1,0 +1,475 @@
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+
+/*------------------------------------*\
+    #Colors Root
+\*------------------------------------*/
+// Background
+// Alert
+$c_alert_error: var(--c_alert_error);
+$c_alert_info: var(--c_alert_info);
+$c_alert_primary_text: var(--c_alert_primary_text);
+$c_alert_succes: var(--c_alert_succes);
+$c_alert_warning: var(--c_alert_warning);
+
+// Backgrounds
+$c_backgrounds_blue_baby: var(--c_backgrounds_blue_baby);
+$c_backgrounds_blue_bright: var(--c_backgrounds_blue_bright);
+$c_backgrounds_blue_navy: var(--c_backgrounds_blue_navy);
+$c_backgrounds_blue_pastel: var(--c_backgrounds_blue_pastel);
+$c_backgrounds_blue_sky: var(--c_backgrounds_blue_sky);
+$c_backgrounds_blue_ultramarine: var(--c_backgrounds_blue_ultramarine);
+$c_backgrounds_gray_baby: var(--c_backgrounds_gray_baby);
+$c_backgrounds_midnight: var(--c_backgrounds_midnight);
+$c_backgrounds_white: var(--c_backgrounds_white);
+$c_backgrounds_primary_chat: var(--c_backgrounds_primary_chat);
+$c_backgrounds_secondary_chat: var(--c_backgrounds_secondary_chat);
+$c_backgrounds_blue_telcel: var(--c_backgrounds_blue_telcel);
+$c_backgrounds_navbar_telcel: var(--c_backgrounds_navbar_telcel);
+$c_backgrounds_mi_telcel: var(--c_backgrounds_mi_telcel);
+$c_backgrounds_mt_empresas: var(--c_backgrounds_mt_empresas);
+$c_backgrounds_blue_midnight: var(--c_backgrounds_blue_midnight);
+$c_backgrounds_red_promo: var(--c_backgrounds_red_promo);
+
+// BUTTON //
+//primary
+$c_button_alert_textprimary: var(--c_button_alert_textprimary);
+$c_button_primary_active: var(--c_button_primary_active);
+$c_button_primary_text: var(--c_text_primary_text);
+$c_button_primary_hover: var(--c_button_primary_hover);
+$c_button_primary_disabled: var(--c_button_primary_disabled);
+$c_button_primary__textdisabled: var(--c_text_textdisabled);
+//secondary
+$c_button_secondary_active: var(--c_button_secondary_active);
+$c_button_secondary_text: var(--c_text_secondary_text);
+$c_button_secondary_border: var(--c_button_secondary_border);
+$c_button_secondary_hover: var(--c_button_secondary_hover);
+$c_button_secondary_borderdisabled: var(--c_button_secondary_borderdisabled);
+$c_button_secondary_disabled: var(--c_button_secondary_disabled);
+$c_button_secondary_textdisabled: var(--c_text_textdisabled); 
+$c_button_error_secondaryhover: var(--c_button_error_secondaryhover);
+//success
+$c_button_success_active: var(--c_button_success_active);
+$c_button_success_border: var(--c_button_success_active);
+$c_button_success_text: var(--c_text_primary_text);
+$c_button_success_hover: var(--c_button_success_hover);
+//success-outlined
+$c_button_success_outlined_active: var(--c_button_secondary_active);
+$c_button_success_outlined_border: var(--c_button_success_border);
+$c_button_success_outlined_text: var(--c_button_alert_textsecondary);
+$c_button_success_outlined_hover: var(--c_button_success_secondaryhover);
+$c_button_success_outlined_borderhover: var(--c_button_success_border);
+//error
+$c_button_error_active: var(--c_button_error_active);
+$c_button_error_border: var(--c_button_error_active);
+$c_button_error_text: var(--c_text_primary_text);
+$c_button_error_hover: var(--c_button_error_hover);
+//error-outlined
+$c_button_error_outlined_active: var(--c_button_secondary_active);
+$c_button_error_outlined_border: var(--c_button_error_border);
+$c_button_error_outlined_text: var(--c_button_alert_textsecondary);
+$c_button_error_outlined_hover: var(--c_button_error_secondaryhover);
+$c_button_error_outlined_borderhover: var(--c_button_error_border);
+//warning
+$c_button_warning_active: var(--c_button_warning_active);
+$c_button_warning_border: var(--c_button_warning_active);
+$c_button_warning_text: var(--c_button_alert_textsecondary);
+$c_button_warning_hover: var(--c_button_warning_hover);
+//warning-outlined
+$c_button_warning_outlined_active: var(--c_button_secondary_active);
+$c_button_warning_outlined_border: var(--c_button_warning_border);
+$c_button_warning_outlined_text: var(--c_button_alert_textsecondary);
+$c_button_warning_outlined_hover: var(--c_button_warning_secondaryhover);
+$c_button_warning_outlined_borderhover: var(--c_button_warning_border);
+//info
+$c_button_info_active: var(--c_button_info_active);
+$c_button_info_border: var(--c_button_info_border);
+$c_button_info_text: var(--c_text_primary_text);
+$c_button_info_hover: var(--c_button_info_hover);
+//info-outlined
+$c_button_info_outlined_active: var(--c_button_secondary_active);
+$c_button_info_outlined_border: var(--c_button_info_border);
+$c_button_info_outlined_text: var(--c_button_alert_textsecondary);
+$c_button_info_outlined_hover: var(--c_button_info_secondaryhover);
+$c_button_info_outlined_borderhover: var(--c_button_info_border);
+//terciario
+$c_button_tertiary_active: var(--c_button_tertiary_active);
+$c_button_tertiary_border: var(--c_button_tertiary_border);
+$c_button_tertiary_hover: var(--c_button_tertiary_hover);
+$c_button_tertiary_select: var(--c_button_tertiary_select);
+//icono
+$c_button_icon_active: var(--c_button_icon_active);
+$c_button_icon_disabled: var(--c_button_icon_disabled);
+$c_button_icon_hover: var(--c_button_icon_hover);
+$c_button_icon_secondary: var(--c_button_icon_secondary);
+
+
+// Chart
+$c_chart_chart_background: var(--c_chart_chart_background);
+$c_chart_text_data: var(--c_chart_text_data);
+$c_chart_text_porcentage: var(--c_chart_text_porcentage);
+
+// Icon
+$c_icon_button_primary: var(--c_icon_button_primary);
+$c_icon_button_secondary: var(--c_icon_button_secondary);
+$c_icon_error_primary: var(--c_icon_error_primary);
+$c_icon_informative_primary: var(--c_icon_informative_primary);
+$c_icon_primary_active: var(--c_icon_primary_active);
+$c_icon_secondary_active: var(--c_icon_secondary_active);
+$c_icon_secondary_informative: var(--c_icon_secondary_informative);
+$c_icon_success_primary: var(--c_icon_success_primary);
+$c_icon_warning_primary: var(--c_icon_warning_primary);
+
+// Inputs
+$c_inputs_background_error: var(--c_inputs_background_error);
+$c_inputs_background_focus: var(--c_inputs_background_focus);
+$c_inputs_border_active: var(--c_inputs_border_active);
+$c_inputs_border_disabled: var(--c_inputs_border_disabled);
+$c_inputs_border_error: var(--c_inputs_border_error);
+$c_inputs_border_focus: var(--c_inputs_border_focus);
+$c_inputs_description_error: var(--c_inputs_description_error);
+$c_inputs_input_active: var(--c_inputs_input_active);
+$c_inputs_label_active: var(--c_inputs_label_active);
+$c_inputs_text_active: var(--c_inputs_text_active);
+$c_inputs_text_error: var(--c_inputs_text_error);
+$c_inputs_text_focus: var(--c_inputs_text_focus);
+$c_inputs_background_disabled: var(--c_inputs_background_disabled);
+$c_inputs_label_disabled: var(--c_inputs_label_disabled);
+$c_inputs_label_error: var(--c_inputs_label_error);
+$c_inputs_label_focus: var(--c_inputs_label_focus);
+$c_inputs_text_disabled: var(--c_inputs_text_disabled);
+
+// Tags
+$c_tag_data_background: var(--c_tag_data_background);
+$c_tag_data_border: var(--c_tag_data_border);
+$c_tag_data_text: var(--c_tag_data_text);
+$c_tag_exclusivo_background: var(--c_tag_exclusivo_background);
+$c_tag_exclusivo_text: var(--c_tag_exclusivo_text);
+$c_tag_informativo_background: var(--c_tag_informativo_background);
+$c_tag_informativo_text: var(--c_tag_informativo_text);
+$c_tag_lanzamiento_background: var(--c_tag_lanzamiento_background);
+$c_tag_lanzamiento_text: var(--c_tag_lanzamiento_text);
+$c_tag_mas_vendido_background: var(--c_tag_mas_vendido_background);
+$c_tag_mas_vendido_text: var(--c_tag_mas_vendido_text);
+$c_tag_nuevo_background: var(--c_tag_nuevo_background);
+$c_tag_nuevo_text: var(--c_tag_nuevo_text);
+$c_tag_preventa_background: var(--c_tag_preventa_background);
+$c_tag_preventa_text: var(--c_tag_preventa_text);
+$c_tag_promocion_background: var(--c_tag_promocion_background);
+$c_tag_promocion_text: var(--c_tag_promocion_text);
+$c_tag_proximamente_background: var(--c_tag_proximamente_background);
+$c_tag_proximamente_text: var(--c_tag_proximamente_text);
+$c_tag_recomendado_background: var(--c_tag_recomendado_background);
+$c_tag_recomendado_text: var(--c_tag_recomendado_text);
+$c_tag_recurrente_background: var(--c_tag_recurrente_background);
+$c_tag_recurrente_text: var(--c_tag_recurrente_text);
+$c_tag_regalo_background: var(--c_tag_regalo_background);
+$c_tag_regalo_text: var(--c_tag_regalo_text);
+$c_tag_neutro_background: var(--c_tag_neutro_background);
+$c_tag_neutro_text: var(--c_tag_neutro_text);
+$c_tag_neutro2_background: var(--c_tag_neutro2_background);
+$c_tag_neutro2_text: var(--c_tag_neutro2_text);
+
+// Text
+$c_text_black_primary: var(--c_text_black_primary);
+$c_text_highlight: var(--c_text_highlight);
+$c_text_informative: var(--c_text_informative);
+$c_text_primary_text: var(--c_text_primary_text);
+$c_text_primary_textlink: var(--c_text_primary_textlink);
+$c_text_secondary_text: var(--c_text_secondary_text);
+$c_text_secondary_textlink: var(--c_text_secondary_textlink);
+$c_text_support: var(--c_text_support);
+$c_text_textdisabled: var(--c_text_textdisabled);
+$c_text_white_secondary: var(--c_text_white_secondary);
+
+// Tools
+$c_tools_divider: var(--c_tools_divider);
+$c_tools_focus: var(--c_tools_focus);
+$c_tools_stroke: var(--c_tools_stroke);
+$c_tools_blue_bright_mi_telcel: var(--c_tools_blue_bright_mi_telcel);
+
+// Espaciado
+$spacing_3xs: var(--spacing_3xs);
+$spacing_2xs: var(--spacing_2xs);
+$spacing_xs: var(--spacing_xs);
+$spacing_sm: var(--spacing_sm);
+$spacing_md: var(--spacing_md);
+$spacing_lg: var(--spacing_lg);
+$spacing_xl: var(--spacing_xl);
+$spacing_2xl: var(--spacing_2xl);
+$spacing_3xl: var(--spacing_3xl);
+$spacing_4xl: var(--spacing_4xl);
+$spacing_5xl: var(--spacing_5xl);
+$spacing_6xl: var(--spacing_6xl);
+$spacing_7xl: var(--spacing_7xl);
+$spacing_8xl: var(--spacing_8xl);
+
+// Radius
+$radius_none: var(--radius_none);
+$radius_3xs: var(--radius_3xs);
+$radius_2xs: var(--radius_2xs);
+$radius_xs: var(--radius_xs);
+$radius_none: var(--radius_none);
+$radius_s: var(--radius_s);
+$radius_sm: var(--radius_sm);
+$radius_m: var(--radius_m);
+$radius_lg: var(--radius_lg);
+
+// shadow
+$level_1: var(--level_1);
+$level_2: var(--level_2);
+$level_3: var(--level_3);
+
+$font_primary: var(--font_primary);
+
+$fontWeight_medium: var(--fontWeight_medium);
+$fontWeight_regular: var(--fontWeight_regular);
+
+$breakpoints: (
+  xs_mobile: 350px,
+  mobile: 414px,
+  tablet: 768px,
+  desktop: 1025px,
+);
+
+// Contenedores
+$container_wide: 1328px;
+$container_narrow: 1024px;
+
+$typography: ( 
+  DM: ( 
+    weight: var(--fontWeight_medium), 
+    size: var(--size_DM), 
+    line-height: var(--lineHeight_DM) 
+  ), 
+  DS: ( 
+    weight: var(--fontWeight_medium), 
+    size: var(--size_DS), 
+    line-height: var(--lineHeight_DS) 
+  ), 
+  H1: ( 
+    weight: var(--fontWeight_medium), 
+    size: var(--size_H1), 
+    line-height: var(--lineHeight_H1) 
+  ), 
+  H0: ( 
+    weight: var(--fontWeight_medium), 
+    size: var(--size_H0), 
+    line-height: var(--lineHeight_H0) 
+  ), 
+  H: ( 
+    weight: var(--fontWeight_medium), 
+    size: var(--size_H), 
+    line-height: var(--lineHeight_H) 
+  ), 
+  Sh: ( 
+    weight: var(--fontWeight_medium), 
+    size: var(--size_Sh), 
+    line-height: var(--lineHeight_Sh) 
+  ), 
+  regular_B2: ( 
+    weight: var(--fontWeight_regular), 
+    size: var(--size_B2), 
+    line-height: var(--lineHeight_B2) 
+  ), 
+  semibold_B2: ( 
+    weight: var(--fontWeight_medium), 
+    size: var(--size_B2), 
+    line-height: var(--lineHeight_B2) 
+  ), 
+  regular_B1: ( 
+    weight: var(--fontWeight_regular), 
+    size: var(--size_B1), 
+    line-height: var(--lineHeight_B1) 
+  ), 
+  semibold_B1: ( 
+    weight: var(--fontWeight_medium), 
+    size: var(--size_B1), 
+    line-height: var(--lineHeight_B1) 
+  ), 
+  regular_B0: ( 
+    weight: var(--fontWeight_regular), 
+    size: var(--size_B0), 
+    line-height: var(--lineHeight_B0) 
+  ), 
+  semibold_B0: ( 
+    weight: var(--fontWeight_medium), 
+    size: var(--size_B0), 
+    line-height: var(--lineHeight_B0) 
+  ), 
+  LT: ( 
+    weight: var(--fontWeight_medium), 
+    size: var(--size_LT), 
+    line-height: var(--lineHeight_LT) 
+  ), 
+  CTA: ( 
+    weight: var(--fontWeight_medium), 
+    size: var(--size_CTA), 
+    line-height: var(--lineHeight_CTA) 
+  ), 
+  SC: ( 
+    weight: var(--fontWeight_medium), 
+    size: var(--size_SC), 
+    line-height: var(--lineHeight_SC) 
+  ), 
+  regular_SD: ( 
+    weight: var(--fontWeight_regular), 
+    size: var(--size_SD), 
+    line-height: var(--lineHeight_SD) 
+  ), 
+  semibold_SD: ( 
+    weight: var(--fontWeight_medium), 
+    size: var(--size_SD), 
+    line-height: var(--lineHeight_SD) 
+  ), 
+ 
+ 
+   
+); 
+
+// Mapa de estilos de botones
+$buttons: (
+    primary: (
+        background: $c_button_primary_active,
+        border: $c_button_primary_active,
+        color: $c_button_primary_text,
+        hover: $c_button_primary_hover,
+        border-hover: $c_button_primary_hover,
+        background-disabled: $c_button_primary_disabled,
+        border-disabled: $c_button_primary_disabled,
+        color-disabled: $c_button_primary__textdisabled,
+    ),
+    secondary: (
+        background: $c_button_secondary_active,
+        border: $c_button_secondary_border,
+        color: $c_button_secondary_text,
+        hover: $c_button_secondary_hover,
+        border-hover: $c_button_secondary_hover,
+        background-disabled: $c_button_secondary_disabled,
+        border-disabled: $c_button_secondary_borderdisabled,
+        color-disabled: $c_button_secondary_textdisabled,
+    ),
+    success: (
+        background: $c_button_success_active,
+        border: $c_button_success_border,
+        color: $c_button_success_text,
+        hover: $c_button_success_hover,
+        background-outlined: $c_button_success_outlined_active,
+        border-outlined: $c_button_success_outlined_border,
+        color-outlined: $c_button_success_outlined_text,
+        hover-outlined: $c_button_success_outlined_hover,
+        border-hover-outlined: $c_button_success_outlined_borderhover,
+    ),
+    error: (
+        background: $c_button_error_active,
+        border: $c_button_error_border,
+        color: $c_button_error_text,
+        hover: $c_button_error_hover,
+        background-outlined: $c_button_error_outlined_active,
+        border-outlined: $c_button_error_outlined_border,
+        color-outlined: $c_button_error_outlined_text,
+        hover-outlined: $c_button_error_outlined_hover,
+        border-hover-outlined: $c_button_error_outlined_borderhover,
+    ),
+    warning: (
+      background: $c_button_warning_active,
+      border: $c_button_warning_border,
+      color: $c_button_warning_text,
+      hover: $c_button_warning_hover,
+      background-outlined: $c_button_warning_outlined_active,
+      border-outlined: $c_button_warning_outlined_border,
+      color-outlined: $c_button_warning_outlined_text,
+      hover-outlined: $c_button_warning_outlined_hover,
+      border-hover-outlined: $c_button_warning_outlined_borderhover,
+    ),
+    info: (
+      background: $c_button_info_active,
+      border: $c_button_info_border,
+      color: $c_button_info_text,
+      hover: $c_button_info_hover,
+      background-outlined: $c_button_info_outlined_active,
+      border-outlined: $c_button_info_outlined_border,
+      color-outlined: $c_button_info_outlined_text,
+      hover-outlined: $c_button_info_outlined_hover,
+      border-hover-outlined: $c_button_info_outlined_borderhover,
+    ),
+);
+
+$tags: (
+  promocion: (
+    background: $c_tag_promocion_background,
+    color: $c_tag_promocion_text,
+    border: none,
+  ),
+  mas_vendido:(
+    background: $c_tag_mas_vendido_background,
+    color: $c_tag_mas_vendido_text,
+    border: none,
+  ),
+  recomendado:(
+    background: $c_tag_recomendado_background,
+    color: $c_tag_recomendado_text,
+    border: none,
+  ),
+  preventa:(
+    background: $c_tag_preventa_background,
+    color: $c_tag_preventa_text,
+    border: none,
+  ),
+  exclusivo:(
+    background: $c_tag_exclusivo_background,
+    color: $c_tag_exclusivo_text,
+    border: none,
+  ),
+  nuevo:(
+    background: $c_tag_nuevo_background,
+    color: $c_tag_nuevo_text,
+    border: none,
+  ),
+  proximamente:(
+    background: $c_tag_proximamente_background,
+    color: $c_tag_proximamente_text,
+    border: none,
+  ),
+  lanzamiento:(
+    background: $c_tag_lanzamiento_background,
+    color: $c_tag_lanzamiento_text,
+    border: none,
+  ),
+  activo_sin_uso:(
+    background: $c_tag_promocion_background,
+    color: $c_tag_promocion_text,
+    border: none,
+  ),
+  por_activar:(
+    background: $c_tag_proximamente_background,
+    color: $c_tag_proximamente_text,
+    border: none,
+  ),
+  paquete_activo:(
+    background: $c_tag_informativo_background,
+    color: $c_tag_informativo_text,
+    border: none,
+  ),
+  paquete:(
+    background: $c_backgrounds_blue_baby,
+    color: $c_tag_data_text,
+    border: none,
+  ),
+  paso:(
+    background: $c_backgrounds_gray_baby,
+    color: $c_tag_data_text,
+    border: none,
+  ),
+  data:(
+    background: $c_tag_data_background,
+    color: $c_tag_data_text,
+    border: 1px solid $c_tag_data_border,
+  ),
+  image:(
+    background: $c_backgrounds_blue_baby,
+    color: $c_text_black_primary,
+    border: none,
+  )
+);

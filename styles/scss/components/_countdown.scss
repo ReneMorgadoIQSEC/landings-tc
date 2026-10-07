@@ -1,0 +1,70 @@
+/*------------------------------------*\
+    #COUNTDOWN
+\*------------------------------------*/
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing_sm;
+  padding: $spacing_xs $spacing_sm;
+  background-color: $c_backgrounds_red_promo;
+  color: $c_text_white_secondary;
+  text-align: center;
+
+  @include media('>tablet') {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    @include typography(H1);
+
+    @include media('>tablet') {
+      @include typography(DS);
+    }
+  }
+
+  &__units {
+    display: flex;
+    align-items: center;
+    gap: $spacing_2xs;
+  }
+
+  &__unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 88px;
+    padding: $spacing_2xs $spacing_xs;
+    border-radius: $radius_xs;
+    background-color: $c_backgrounds_white;
+    color: $c_text_black_primary;
+
+    @include media('>tablet') {
+      width: 96px;
+    }
+  }
+
+  &__value,
+  &__separator {
+    @include typography(DM);
+  }
+
+  &__value {
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__separator {
+    display: none;
+
+    @include media('>tablet') {
+      display: block;
+    }
+  }
+
+  &__label {
+    @include typography(SC);
+  }
+}

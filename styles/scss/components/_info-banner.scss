@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    #INFO BANNER
+\*------------------------------------*/
+
+.info-banner {
+  @include container($container_narrow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: $radius_s;
+
+  @include media('>tablet') {
+    flex-direction: row;
+  }
+
+  &__media {
+    flex-shrink: 0;
+    height: 262px;
+
+    @include media('>tablet') {
+      width: 401px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $spacing_sm;
+    padding: $spacing_sm;
+    background-color: $c_backgrounds_blue_telcel;
+    color: $c_text_white_secondary;
+
+    @include media('>tablet') {
+      flex: 1;
+      min-width: 0;
+    }
+  }
+
+  &__title {
+    @include typography(DS);
+
+    @include media('>tablet') {
+      @include typography(DM);
+    }
+  }
+
+  &__text {
+    @include typography(semibold_B1);
+  }
+}

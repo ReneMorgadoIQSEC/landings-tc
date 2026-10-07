@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    #CONTENT CAROUSEL
+\*------------------------------------*/
+
+.content-carousel {
+  display: block;
+  position: relative;
+
+  &__viewport {
+    padding-inline: $spacing_sm;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 49px;
+    height: 49px;
+    padding: 0;
+    border: 0;
+    border-radius: $radius_lg;
+    background-color: $c_backgrounds_midnight;
+    box-shadow: $level_2;
+    transform: translateY(-50%);
+
+    &:focus-visible {
+      outline: 2px solid $c_tools_focus;
+      outline-offset: 2px;
+    }
+
+    &--prev {
+      left: 7.5px;
+
+      img {
+        transform: scaleX(-1);
+      }
+    }
+
+    &--next {
+      right: 7.5px;
+    }
+
+    &.swiper-button-disabled,
+    &.swiper-button-lock {
+      display: none;
+    }
+  }
+}

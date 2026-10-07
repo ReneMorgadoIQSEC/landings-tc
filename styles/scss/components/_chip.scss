@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    #CHIP
+\*------------------------------------*/
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing_3xs;
+  min-height: 32px;
+  padding-inline: $spacing_sm;
+  border: 1px solid $c_text_informative;
+  border-radius: $radius_lg;
+  color: $c_text_informative;
+  white-space: nowrap;
+  @include typography(semibold_B0);
+}

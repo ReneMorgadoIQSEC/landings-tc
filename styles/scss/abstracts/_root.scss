@@ -1,0 +1,387 @@
+:root {
+  /* ALERT */
+  --c_alert_error: #fdf2f2;
+  --c_alert_info: #f2f7f9;
+  --c_alert_primary_text: #222222;
+  --c_alert_succes: #eff7ef;
+  --c_alert_warning: #fdf6e6;
+
+  /* BACKGROUNDS */
+  --c_backgrounds_blue_baby: #f2f7f9;
+  --c_backgrounds_blue_bright: #f0f5ff;
+  --c_backgrounds_blue_navy: #004d7e;
+  --c_backgrounds_blue_pastel: #e4edf5;
+  --c_backgrounds_blue_sky: #3377c0;
+  --c_backgrounds_blue_ultramarine: #2a6adb;
+  --c_backgrounds_gray_baby: #f8f8f8;
+  --c_backgrounds_midnight: #ffffff;
+  --c_backgrounds_white: #ffffff;
+  --c_backgrounds_primary_chat: #d0d0d0;
+  --c_backgrounds_secondary_chat: #595959;
+  --c_backgrounds_blue_telcel: #00308b;
+  --c_backgrounds_navbar_telcel: #ffffff;
+  --c_backgrounds_mi_telcel: #ebf6ff;
+  --c_backgrounds_mt_empresas: #0F2F85;
+  --c_backgrounds_blue_midnight: #262D3B;
+  --c_backgrounds_red_promo: #e9171a;
+
+  /* BUTTON */
+  --c_button_alert_textprimary: #ffffff;
+  --c_button_alert_textsecondary: #222222;
+  --c_button_error_active: #d32222;
+  --c_button_error_border: #d32222;
+  --c_button_error_hover: #bd1e1e;
+  --c_button_error_secondaryhover: #fdf2f2;
+  --c_button_icon_active: #0071d1;
+  --c_button_icon_disabled: #595959;
+  --c_button_icon_hover: #f0f5ff;
+  --c_button_icon_secondary: #ffffff;
+  --c_button_info_active: #00529b;
+  --c_button_info_border: #00529b;
+  --c_button_info_hover: #004380;
+  --c_button_info_secondaryhover: #f2f7f9;
+  --c_button_primary_active: #7b1fa2;
+  --c_button_primary_disabled: #d0d0d0;
+  --c_button_primary_hover: #8835ab;
+  --c_button_secondary_active: #ffffff;
+  --c_button_secondary_border: #7b1fa2;
+  --c_button_secondary_borderdisabled: #595959;
+  --c_button_secondary_disabled: #ffffff;
+  --c_button_secondary_hover: #ebddf1;
+  --c_button_success_active: #008000;
+  --c_button_success_border: #008000;
+  --c_button_success_hover: #006600;
+  --c_button_success_secondaryhover: #eff7ef;
+  --c_button_tertiary_active: #e4edf5;
+  --c_button_tertiary_border: #0071d1;
+  --c_button_tertiary_hover: #deedfb;
+  --c_button_tertiary_select: #0071d1;
+  --c_button_warning_active: #ebab07;
+  --c_button_warning_border: #ebab07;
+  --c_button_warning_hover: #d09706;
+  --c_button_warning_secondary: #fdf6e6;
+  --c_button_warning_secondaryhover: #fdf6e6;
+
+  /* CHART */
+  --c_chart_text_data: #222222;
+  --c_chart_text_porcentage: #757575;
+  --c_chart_chart_background: #d0d0d0;
+  --c_chart_full: #8cc14b;
+  --c_chart_half: #ffcb31;
+  --c_chart_low: #e33b4d;
+  --c_chart_unlimited: #66e2fc;
+
+  /* ICON */
+  --c_icon_button_primary: #ffffff;
+  --c_icon_button_secondary: #7b1fa2;
+  --c_icon_error_primary: #d32222;
+  --c_icon_informative_primary: #00529b;
+  --c_icon_primary_active: #0071d1;
+  --c_icon_secondary_active: #ffffff;
+  --c_icon_secondary_informative: #f2f7f9;
+  --c_icon_success_primary: #008000;
+  --c_icon_warning_primary: #ebab07;
+  --c_icon_navbarapp: #757575;
+
+  /* INPUT */
+  --c_inputs_background_error: #ffffff;
+  --c_inputs_background_focus: #ffffff;
+  --c_inputs_border_active: #757575;
+  --c_inputs_border_disabled: #d0d0d0;
+  --c_inputs_border_error: #d32222;
+  --c_inputs_border_focus: #0071d1;
+  --c_inputs_description_error: #d32222;
+  --c_inputs_input_active: #ffffff;
+  --c_inputs_label_active: #222222;
+  --c_inputs_text_active: #757575;
+  --c_inputs_text_error: #222222;
+  --c_inputs_text_focus: #222222;
+  --c_inputs_background_disabled: #f8f8f8;
+  --c_inputs_label_disabled: #595959;
+  --c_inputs_label_error: #d32222;
+  --c_inputs_label_focus: #0071d1;
+  --c_inputs_text_disabled: #595959;
+
+  /* TAG */
+  --c_tag_data_background: #ffffff;
+  --c_tag_data_border: #00529b;
+  --c_tag_data_text: #00529b;
+  --c_tag_exclusivo_background: #ffe4b9;
+  --c_tag_exclusivo_text: #5a3d10;
+  --c_tag_informativo_background: #e4edf5;
+  --c_tag_informativo_text: #00529b;
+  --c_tag_lanzamiento_background: #f6eaf7;
+  --c_tag_lanzamiento_text: #9723a0;
+  --c_tag_mas_vendido_background: #ffe7de;
+  --c_tag_mas_vendido_text: #b12f08;
+  --c_tag_nuevo_background: #f2e4ea;
+  --c_tag_nuevo_text: #960747;
+  --c_tag_preventa_background: #e9ecf7;
+  --c_tag_preventa_text: #1c42b4;
+  --c_tag_promocion_background: #f0f7ef;
+  --c_tag_promocion_text: #006100;
+  --c_tag_proximamente_background: #eeebf4;
+  --c_tag_proximamente_text: #5e3b96;
+  --c_tag_recomendado_background: #e4eef0;
+  --c_tag_recomendado_text: #00575f;
+  --c_tag_recurrente_background: #ffe8d8;
+  --c_tag_recurrente_text: #7b3200;
+  --c_tag_regalo_background: #f0f7ef;
+  --c_tag_regalo_text: #006100;
+   --c_tag_neutro_background: #ECECEC;
+    --c_tag_neutro_text: #222222;
+    --c_tag_neutro2_background: #f2f7f9;
+    --c_tag_neutro2_text: #222222;
+
+  /* TEXT */
+  --c_text_black_primary: #222222;
+  --c_text_highlight: #c71585;
+  --c_text_informative: #00529b;
+  --c_text_primary_text: #ffffff;
+  --c_text_primary_textlink: #0071d1;
+  --c_text_secondary_text: #7b1fa2;
+  --c_text_secondary_textlink: #ffffff;
+  --c_text_support: #757575;
+  --c_text_textdisabled: #595959;
+  --c_text_white_secondary: #ffffff;
+  --c_text_ilimitado_text: #31747e;
+  --c_text_medio_text: #aa7f00;
+
+  /* TOOLS */
+  --c_tools_divider: #d0d0d0;
+  --c_tools_focus: #0071d1;
+  --c_tools_stroke: #595959;
+  --c_tools_overlay: #0000003c;
+  --c_tools_blue_bright_mi_telcel: #cbdffc;
+
+  /* Espaciado */
+  --spacing_3xs: 4px;
+  --spacing_2xs: 8px;
+  --spacing_xs: 12px;
+  --spacing_sm: 16px;
+  --spacing_md: 20px;
+  --spacing_lg: 24px;
+  --spacing_xl: 28px;
+  --spacing_2xl: 32px;
+  --spacing_3xl: 36px;
+  --spacing_4xl: 40px;
+  --spacing_5xl: 44px;
+  --spacing_6xl: 48px;
+  --spacing_7xl: 52px;
+  --spacing_8xl: 56px;
+
+  /* Radius */
+  --radius_none: 0px;
+  --radius_3xs: 4px;
+  --radius_2xs: 8px;
+  --radius_xs: 12px;
+  --radius_s: 16px;
+  --radius_sm: 20px;
+  --radius_m: 24px;
+  --radius_lg: 96px;
+
+  /* Shadows */
+  --level_1: 0px 0px 6px 0px rgba(0, 34, 77, 0.2);
+  --level_2: 0px 3px 14px 0px rgba(0, 34, 77, 0.2);
+  --level_3: 0px 12px 22px 0px rgba(0, 34, 77, 0.2);
+
+  --font_primary: "Telceltype", sans-serif; 
+ 
+  /* Size Fonts */ 
+  --size_DM: 30px; 
+  --size_DS: 24px; 
+  --size_H1: 20px; 
+  --size_H0: 20px; 
+  --size_H: 18px; 
+  --size_Sh: 18px; 
+  --size_B2: 16px; 
+  --size_B1: 14px; 
+  --size_B0: 14px; 
+  --size_CTA: 14px; 
+  --size_LT: 14px; 
+  --size_SC: 13px; 
+  --size_SD: 12px; 
+
+  /* Line Height */ 
+  --lineHeight_DM: 34px; 
+  --lineHeight_DS: 28px; 
+  --lineHeight_H1: 24px; 
+  --lineHeight_H0: 24px; 
+  --lineHeight_H: 22px; 
+  --lineHeight_Sh: 22px; 
+  --lineHeight_B2: 20px; 
+  --lineHeight_B1: 22px; 
+  --lineHeight_B0: 22px; 
+  --lineHeight_CTA: 22px; 
+  --lineHeight_LT: 22px; 
+  --lineHeight_SC: 16px; 
+  --lineHeight_SD: 18px; 
+
+  /* font weights */ 
+  --fontWeight_thin: 100; 
+  --fontWeight_light: 300; 
+  --fontWeight_regular: 400; 
+  --fontWeight_medium: 500; 
+  --fontWeight_semiBold: 600; 
+  --fontWeight_bold: 700; 
+  --fontWeight_black: 900; 
+ 
+}
+  @media (prefers-color-scheme: dark) {
+    .allow-dark {
+      /* ALERT */
+      --c_alert_error: #16212c;
+      --c_alert_info: #16212c;
+      --c_alert_primary_text: #16212c;
+      --c_alert_succes: #16212c;
+      --c_alert_warning: #16212c;
+
+      /* BACKGROUNDS */
+      --c_backgrounds_blue_baby: #252d3c;
+      --c_backgrounds_blue_bright: #35465f;
+      --c_backgrounds_blue_navy: #191f2d;
+      --c_backgrounds_blue_pastel: #405673;
+      --c_backgrounds_blue_sky: #1b2331;
+      --c_backgrounds_blue_ultramarine: #0a1015;
+      --c_backgrounds_gray_baby: #071b36;
+      --c_backgrounds_midnight: #2a3948;
+      --c_backgrounds_white: #191f2d;
+      --c_backgrounds_primary_chat: #f2f8fc;
+      --c_backgrounds_secondary_chat: #d0d0d0;
+      --c_backgrounds_blue_telcel: #0a1015;
+      --c_backgrounds_navbar_telcel: #0a1015;
+      --c_backgrounds_mi_telcel: #16212c;
+      --c_backgrounds_mt_empresas: #0F2F85;
+      --c_backgrounds_blue_midnight: #262D3B;
+
+      /* BUTTON */
+      --c_button_alert_textprimary: #f2f8fc;
+      --c_button_alert_textsecondary: #f2f8fc;
+      --c_button_error_active: #ff6961;
+      --c_button_error_border: #ff6961;
+      --c_button_error_hover: #ff9994;
+      --c_button_error_secondaryhover: #32415d;
+      --c_button_icon_active: #83cef6;
+      --c_button_icon_disabled: #d0d0d0;
+      --c_button_icon_hover: #303b52;
+      --c_button_icon_secondary: #071b36;
+      --c_button_info_active: #3c97e5;
+      --c_button_info_border: #3c97e5;
+      --c_button_info_hover: #97c8f1;
+      --c_button_info_secondaryhover: #32415d;
+      --c_button_primary_active: #d2aefd;
+      --c_button_primary_disabled: #595959;
+      --c_button_primary_hover: #e8d6fe;
+      --c_button_secondary_active: #071b36;
+      --c_button_secondary_border: #d2aefd;
+      --c_button_secondary_borderdisabled: #595959;
+      --c_button_secondary_disabled: #002045;
+      --c_button_secondary_hover: #32415d;
+      --c_button_success_active: #08bf48;
+      --c_button_success_border: #08bf48;
+      --c_button_success_hover: #08bf48;
+      --c_button_success_secondaryhover: #32415d;
+      --c_button_tertiary_active: #252d3c;
+      --c_button_tertiary_border: #d2aefd;
+      --c_button_tertiary_hover: #1b2a46;
+      --c_button_tertiary_select: #d2aefd;
+      --c_button_warning_active: #ff8c00;
+      --c_button_warning_border: #ff8c00;
+      --c_button_warning_hover: #cc7000;
+      --c_button_warning_secondary: #32415d;
+      --c_button_warning_secondaryhover: #32415d;
+
+      /* CHART */
+      --c_chart_text_data: #f2f8fc;
+      --c_chart_text_porcentage: #f2f8fc;
+      --c_chart_chart_background: #d0d0d0;
+      --c_chart_full: #8cc14b;
+      --c_chart_half: #ffcb31;
+      --c_chart_low: #e33b4d;
+      --c_chart_unlimited: #66e2fc;
+
+      /* ICON */
+      --c_icon_button_primary: #002045;
+      --c_icon_button_secondary: #ebddf1;
+      --c_icon_error_primary: #ff6961;
+      --c_icon_informative_primary: #3c97e5;
+      --c_icon_primary_active: #83cef6;
+      --c_icon_secondary_active: #f2f8fc;
+      --c_icon_secondary_informative: #3c97e5;
+      --c_icon_success_primary: #069036;
+      --c_icon_warning_primary: #9a7800;
+      --c_icon_navbarapp: #d0d0d0;
+
+      /* INPUT */
+      --c_inputs_background_error: #002045;
+      --c_inputs_background_focus: #002045;
+      --c_inputs_border_active: #f2f8fc;
+      --c_inputs_border_disabled: #595959;
+      --c_inputs_border_error: #ff6961;
+      --c_inputs_border_focus: #83cef6;
+      --c_inputs_description_error: #ff6961;
+      --c_inputs_input_active: #252d3c;
+      --c_inputs_label_active: #f2f8fc;
+      --c_inputs_text_active: #f2f8fc;
+      --c_inputs_text_error: #f2f8fc;
+      --c_inputs_text_focus: #f2f8fc;
+      --c_inputs_background_disabled: #252d3c;
+      --c_inputs_label_disabled: #d0d0d0;
+      --c_inputs_label_error: #ff6961;
+      --c_inputs_label_focus: #83cef6;
+      --c_inputs_text_disabled: #d0d0d0;
+
+      /* TAG */
+      --c_tag_data_background: #1b2a46;
+      --c_tag_data_border: #3c97e5;
+      --c_tag_data_text: #3c97e5;
+      --c_tag_exclusivo_background: #f7b374;
+      --c_tag_exclusivo_text: #5a3d10;
+      --c_tag_informativo_background: #191f2d;
+      --c_tag_informativo_text: #f2f8fc;
+      --c_tag_lanzamiento_background: #f2cef5;
+      --c_tag_lanzamiento_text: #4f0855;
+      --c_tag_mas_vendido_background: #facab8;
+      --c_tag_mas_vendido_text: #842204;
+      --c_tag_nuevo_background: #ffd5e8;
+      --c_tag_nuevo_text: #80033c;
+      --c_tag_preventa_background: #d3dcff;
+      --c_tag_preventa_text: #1b3789;
+      --c_tag_promocion_background: #d8fedd;
+      --c_tag_promocion_text: #0a500a;
+      --c_tag_proximamente_background: #e7dbff;
+      --c_tag_proximamente_text: #532e95;
+      --c_tag_recomendado_background: #ccf7ff;
+      --c_tag_recomendado_text: #0f575d;
+      --c_tag_recurrente_background: #ffe8d8;
+      --c_tag_recurrente_text: #7b3200;
+      --c_tag_regalo_background: #d8fed3;
+      --c_tag_regalo_text: #0a500a;
+      --c_tag_neutro_background: #ececec;
+      --c_tag_neutro_text: #222222;
+      --c_tag_neutro2_background: #f2f7f9;
+      --c_tag_neutro2_text: #222222;
+
+      /* TEXT */
+      --c_text_black_primary: #f2f8fc;
+      --c_text_highlight: #ffbdff;
+      --c_text_informative: #4aa6f6;
+      --c_text_primary_text: #002045;
+      --c_text_primary_textlink: #83cef6;
+      --c_text_secondary_text: #d2aefd;
+      --c_text_secondary_textlink: #83cef6;
+      --c_text_support: #c8c8c8;
+      --c_text_textdisabled: #d0d0d0;
+      --c_text_white_secondary: #f2f8fc;
+      --c_text_ilimitado_text: #0cbad4;
+      --c_text_medio_text: #ffd968;
+
+      /* TOOLS */
+      --c_tools_divider: #f2f8fc;
+      --c_tools_focus: #83cef6;
+      --c_tools_stroke: #d0d0d0;
+      --c_tools_overlay: #0000003c;
+      --c_tools_blue_bright_mi_telcel: #191f2d;
+    }
+  }
+

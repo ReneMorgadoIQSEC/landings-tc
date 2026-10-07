@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    #MIXINS
+\*------------------------------------*/
+
+@mixin media($condition) {
+	// Separar el operador ( >, < ) y el breakpoint
+	$operator: str-slice($condition, 1, 1);
+	$breakpoint: str-slice($condition, 2);
+
+	// Verificamos que el breakpoint existe en el mapa
+	@if map-has-key($breakpoints, $breakpoint) {
+		$bp-value: map-get($breakpoints, $breakpoint);
+
+		// Generamos la media query con el operador adecuado
+		@if $operator=='>' {
+			@media (min-width: $bp-value) {
+				@content;
+			}
+		}
+
+		@else if $operator=='<' {
+			@media (max-width: ($bp-value - 1)) {
+				@content;
+			}
+		}
+	}
+
+	@else {
+		@warn "El breakpoint '#{$breakpoint}' no está definido en el mapa de breakpoints.";
+	}
+}
+
+@mixin typography($key) {
+	@if map-has-key($typography, $key) {
+		$values: map-get($typography, $key);
+		font-size: map-get($values, size);
+		font-weight: map-get($values, weight);
+		line-height: map-get($values, line-height);
+		font-family: $font_primary;
+	}
+
+	@else {
+		@warn "La clave `#{$key}` no existe en el mapa de tipografía.";
+	}
+}
+
+@mixin container($max-width, $gutter: $spacing_sm) {
+	width: min(calc(100% - (#{$gutter} * 2)), #{$max-width});
+	margin-inline: auto;
+}
