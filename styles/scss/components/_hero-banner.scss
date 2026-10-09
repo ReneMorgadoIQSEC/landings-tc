@@ -2,18 +2,22 @@
     #HERO BANNER
 \*------------------------------------*/
 
-// Posición del CTA relativa a la imagen: centrado a 24px del borde inferior sobre
-// 414 × 456 (móvil) y left 45px / top 376px (bottom 96px) sobre 1366 × 512 (desktop).
-// Cada landing puede traer imágenes de cualquier tamaño: la caja conserva la
-// proporción de Figma y la imagen se recorta centrada.
-// Con imagen propia, el título y la descripción se muestran sobre el CTA: en móvil
-// arriba de la imagen (la zona libre) y en desktop justo encima del CTA.
+// Texto y CTA sobre la imagen. Móvil: texto arriba y CTA centrado al pie, a 24px
+// de los bordes. Desktop: bloque de 560px en left 80px / top 126px sobre
+// 1366 × 512, en porcentajes del ancho para que escale con la imagen.
+// La imagen y el texto comparten la celda del grid: si el texto no cabe (tablet o
+// copys largos), el hero crece y la imagen se recorta centrada sin deformarse.
 .hero-banner {
-  position: relative;
+  display: grid;
+
+  &__media,
+  &__content {
+    grid-area: 1 / 1;
+  }
 
   &__media img {
     width: 100%;
-    height: auto;
+    height: 100%;
     aspect-ratio: 414 / 456;
     object-fit: cover;
     object-position: center;
@@ -24,46 +28,47 @@
   }
 
   &__content {
-    position: absolute;
-    inset: 0 $spacing_sm 5.3%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: $spacing_2xs;
-    padding-top: $spacing_lg;
-    color: $c_backgrounds_blue_telcel;
-    text-align: center;
+    align-items: flex-start;
+    gap: $spacing_xs;
+    padding: $spacing_lg;
 
     @include media('>tablet') {
-      inset: auto auto 18.8% 3.3%;
-      max-width: 40%;
-      padding-top: 0;
-      align-items: flex-start;
-      text-align: left;
+      align-self: start;
+      width: 41%;
+      margin: 9.224% 0 $spacing_lg 5.86%;
+      padding: 0;
+      gap: $spacing_sm;
     }
   }
 
   &__title {
-    @include typography(DS);
+    @include typography(DM);
+    color: $c_text_informative;
 
     @include media('>tablet') {
-      @include typography(DM);
+      @include typography(DL);
     }
   }
 
   &__description {
-    @include typography(regular_B1);
+    @include typography(H0);
+    font-weight: $fontWeight_regular;
+    color: $c_text_black_primary;
 
     @include media('>tablet') {
-      @include typography(H0);
-      font-weight: $fontWeight_regular;
+      @include typography(DS);
     }
   }
 
+  // En desktop el texto y el CTA van a 32px: gap de 16px + margen de 16px.
   &__cta.button {
+    align-self: center;
     margin-top: auto;
 
     @include media('>tablet') {
+      align-self: flex-start;
       width: 288px;
       margin-top: $spacing_sm;
     }

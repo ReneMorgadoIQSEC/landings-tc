@@ -239,6 +239,11 @@ $container_wide: 1328px;
 $container_narrow: 1024px;
 
 $typography: ( 
+  DL: ( 
+    weight: var(--fontWeight_medium), 
+    size: var(--size_DL), 
+    line-height: var(--lineHeight_DL) 
+  ), 
   DM: ( 
     weight: var(--fontWeight_medium), 
     size: var(--size_DM), 
