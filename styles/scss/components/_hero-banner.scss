@@ -4,16 +4,20 @@
 
 // Posición del CTA relativa a la imagen: centrado a 24px del borde inferior sobre
 // 414 × 456 (móvil) y left 45px / top 376px sobre 1366 × 512 (desktop).
+// Cada landing puede traer imágenes de cualquier tamaño: la caja conserva la
+// proporción de Figma y la imagen se recorta centrada.
 .hero-banner {
   position: relative;
 
   &__media img {
     width: 100%;
     height: auto;
+    aspect-ratio: 414 / 456;
+    object-fit: cover;
+    object-position: center;
 
-    @include media('<tablet') {
-      aspect-ratio: 414 / 456;
-      object-fit: cover;
+    @include media('>tablet') {
+      aspect-ratio: 1366 / 512.25;
     }
   }
 

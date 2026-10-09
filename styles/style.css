@@ -1202,11 +1202,13 @@ img {
 .hero-banner__media img {
   width: 100%;
   height: auto;
+  aspect-ratio: 414/456;
+  object-fit: cover;
+  object-position: center;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .hero-banner__media img {
-    aspect-ratio: 414/456;
-    object-fit: cover;
+    aspect-ratio: 1366/512.25;
   }
 }
 .hero-banner__cta.button {
@@ -1254,6 +1256,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 .info-banner__content {
   display: flex;
@@ -1615,6 +1618,9 @@ img {
     padding-inline: var(--spacing_lg);
   }
 }
+.phone-ranges__card--full-image {
+  justify-content: center;
+}
 .phone-ranges__picture, .phone-ranges__background {
   position: absolute;
   inset: 0;
@@ -1624,6 +1630,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 @media (max-width: 767px) {
   .phone-ranges__card--low .phone-ranges__background {
