@@ -913,6 +913,11 @@ img {
   gap: var(--spacing_8xl);
   padding-bottom: var(--spacing_8xl);
 }
+.landing :where(section) {
+  width: 100%;
+  max-width: 1366px;
+  margin-inline: auto;
+}
 
 /*------------------------------------*\
     #HEADER
