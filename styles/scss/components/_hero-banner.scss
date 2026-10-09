@@ -3,9 +3,11 @@
 \*------------------------------------*/
 
 // Posición del CTA relativa a la imagen: centrado a 24px del borde inferior sobre
-// 414 × 456 (móvil) y left 45px / top 376px sobre 1366 × 512 (desktop).
+// 414 × 456 (móvil) y left 45px / top 376px (bottom 96px) sobre 1366 × 512 (desktop).
 // Cada landing puede traer imágenes de cualquier tamaño: la caja conserva la
 // proporción de Figma y la imagen se recorta centrada.
+// Con imagen propia, el título y la descripción se muestran sobre el CTA: en móvil
+// arriba de la imagen (la zona libre) y en desktop justo encima del CTA.
 .hero-banner {
   position: relative;
 
@@ -21,18 +23,49 @@
     }
   }
 
-  &__cta.button {
+  &__content {
     position: absolute;
-    bottom: 5.3%;
-    left: 50%;
-    transform: translateX(-50%);
+    inset: 0 $spacing_sm 5.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing_2xs;
+    padding-top: $spacing_lg;
+    color: $c_backgrounds_blue_telcel;
+    text-align: center;
 
     @include media('>tablet') {
-      top: 73.4%;
-      bottom: auto;
-      left: 3.3%;
+      inset: auto auto 18.8% 3.3%;
+      max-width: 40%;
+      padding-top: 0;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    @include typography(DS);
+
+    @include media('>tablet') {
+      @include typography(DM);
+    }
+  }
+
+  &__description {
+    @include typography(regular_B1);
+
+    @include media('>tablet') {
+      @include typography(H0);
+      font-weight: $fontWeight_regular;
+    }
+  }
+
+  &__cta.button {
+    margin-top: auto;
+
+    @include media('>tablet') {
       width: 288px;
-      transform: none;
+      margin-top: $spacing_sm;
     }
   }
 }

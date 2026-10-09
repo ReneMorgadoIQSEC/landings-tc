@@ -42,13 +42,6 @@
         padding-inline: $spacing_lg;
       }
     }
-
-    // Imagen de la landing con el título integrado: el texto del HTML queda
-    // .visually-hidden y el CTA se centra para no tapar el título ni la franja
-    // inferior de la imagen.
-    &--full-image {
-      justify-content: center;
-    }
   }
 
   &__picture,
