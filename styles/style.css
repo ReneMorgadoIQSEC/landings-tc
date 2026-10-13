@@ -1341,9 +1341,9 @@ img {
   }
 }
 .info-banner__text {
-  font-size: var(--size_B1);
+  font-size: var(--size_B2);
   font-weight: var(--fontWeight_medium);
-  line-height: var(--lineHeight_B1);
+  line-height: var(--lineHeight_B2);
   font-family: var(--font_primary);
 }
 
