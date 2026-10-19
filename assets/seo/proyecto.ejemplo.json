@@ -1,0 +1,27 @@
+{
+  "_ayuda": "Copia como proyecto.json si la campaña no es Telcel. Claves con _ = comentarios. Nunca inventar datos de la organización.",
+  "cliente": "MiCliente",
+  "marca": "Mi Marca",
+  "lang": "es-MX",
+  "og_locale": "es_MX",
+  "organizacion": {
+    "name": "",
+    "legalName": "",
+    "url": "",
+    "logo": "",
+    "sameAs": []
+  },
+  "sitio": {
+    "name": "",
+    "url": ""
+  },
+  "breadcrumb": true,
+  "breadcrumb_inicio": {"name": "Inicio", "url": ""},
+  "webp": false,
+  "headings": false,
+  "faq": {
+    "pregunta": "accordion__question",
+    "respuesta": "accordion__answer"
+  },
+  "campanas_conocidas": ["Buen Fin", "Hot Sale", "Mundial", "Navidad"]
+}

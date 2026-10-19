@@ -1,0 +1,48 @@
+{
+  "_ayuda": "Preset SEO/GEO de Telcel para las landings de campaña de este repo. Lo consume el agente al generar cada landing (seo.mdc). No inventar sameAs.",
+  "cliente": "Telcel",
+  "marca": "Telcel",
+  "lang": "es-MX",
+  "og_locale": "es_MX",
+  "organizacion": {
+    "name": "Telcel",
+    "legalName": "Radiomóvil Dipsa, S.A. de C.V.",
+    "url": "https://www.telcel.com",
+    "logo": "/assets/icons/logo-telcel.svg",
+    "sameAs": []
+  },
+  "_organizacion": "legalName del footer. logo relativo a la raíz del sitio publicado. sameAs vacío hasta confirmación del cliente.",
+  "sitio": {
+    "name": "Telcel",
+    "url": "https://www.telcel.com"
+  },
+  "breadcrumb": true,
+  "breadcrumb_inicio": {
+    "name": "Inicio",
+    "url": "https://www.telcel.com"
+  },
+  "webp": false,
+  "headings": false,
+  "_webp_headings": "Desactivados: este proyecto no convierte imágenes a WebP ni retoca headings (ya son h1–h3 semánticos).",
+  "faq": {
+    "pregunta": "accordion__question",
+    "respuesta": "accordion__answer"
+  },
+  "campanas_conocidas": [
+    "Navidad",
+    "Buen Fin",
+    "Hot Sale",
+    "Black Friday",
+    "Cyber Monday",
+    "Mundial",
+    "Día de las Madres",
+    "Día del Padre",
+    "Regreso a Clases",
+    "San Valentín",
+    "Verano",
+    "Año Nuevo",
+    "Fin de Año",
+    "Halloween",
+    "Semana Santa"
+  ]
+}
