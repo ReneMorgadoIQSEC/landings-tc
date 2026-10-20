@@ -47,6 +47,11 @@
     @include typography(DM);
     color: $c_text_informative;
 
+    // Pantallas muy angostas: el título no se encima con el producto de la imagen.
+    @media (max-width: 359px) {
+      @include typography(DS);
+    }
+
     @include media('>tablet') {
       @include typography(DL);
     }
@@ -56,6 +61,10 @@
     @include typography(H0);
     font-weight: $fontWeight_regular;
     color: $c_text_black_primary;
+
+    @media (max-width: 359px) {
+      @include typography(regular_B2);
+    }
 
     @include media('>tablet') {
       @include typography(DS);

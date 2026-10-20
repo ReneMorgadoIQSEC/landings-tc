@@ -1244,6 +1244,14 @@ img {
   font-family: var(--font_primary);
   color: var(--c_text_informative);
 }
+@media (max-width: 359px) {
+  .hero-banner__title {
+    font-size: var(--size_DS);
+    font-weight: var(--fontWeight_medium);
+    line-height: var(--lineHeight_DS);
+    font-family: var(--font_primary);
+  }
+}
 @media (min-width: 768px) {
   .hero-banner__title {
     font-size: var(--size_DL);
@@ -1259,6 +1267,14 @@ img {
   font-family: var(--font_primary);
   font-weight: var(--fontWeight_regular);
   color: var(--c_text_black_primary);
+}
+@media (max-width: 359px) {
+  .hero-banner__description {
+    font-size: var(--size_B2);
+    font-weight: var(--fontWeight_regular);
+    line-height: var(--lineHeight_B2);
+    font-family: var(--font_primary);
+  }
 }
 @media (min-width: 768px) {
   .hero-banner__description {
