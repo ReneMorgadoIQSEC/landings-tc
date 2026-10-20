@@ -42,6 +42,26 @@
       }
     },
     {
+      "@type": "SaleEvent",
+      "@id": "https://landings-tc-production.up.railway.app/buen-fin/celulares-gama-alta/#event",
+      "name": "Buen Fin 2026",
+      "description": "Prepárate para el Buen Fin Telcel 2026 y descubre celulares gama alta con tecnología premium. Del 13 al 17 de noviembre consulta promociones.",
+      "startDate": "2026-11-13T00:00:00-06:00",
+      "endDate": "2026-11-17T23:59:59-06:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "location": {
+        "@type": "VirtualLocation",
+        "url": "https://landings-tc-production.up.railway.app/buen-fin/celulares-gama-alta/"
+      },
+      "organizer": {
+        "@id": "https://www.telcel.com/#organization"
+      },
+      "image": [
+        "https://landings-tc-production.up.railway.app/assets/images/alta_prev_hero_d.png"
+      ]
+    },
+    {
       "@type": "Organization",
       "@id": "https://www.telcel.com/#organization",
       "name": "Telcel",
@@ -148,11 +168,51 @@
   <link rel="stylesheet" href="../../styles/style.css">
   <script src="../../js/libs/swiper-bundle.min.js" defer></script>
   <script src="../../js/main.js" type="module"></script>
+  <!-- Capa de datos + página vista (Adobe Launch) -->
+  <script>
+  (function () {
+    window.dlMetri = window.dlMetri || [];
+    var pv = {"event": "landings", "pagina": {"canal": "Telcel", "mundo": "Personas", "seccion": "Landing", "subseccion": "IA", "pageName": "Landing|IA|{titulo_pagina}"}, "contenido": {"banners": "", "equipos": ""}, "usuario": {"region": "{region}", "perfil": "NO CLIENT"}};
+    var titulo = (document.title || "Sin título").trim().replace(new RegExp("\\s*\\|\\s*Telcel\\s*$"), '').trim();
+    (function rellenar(o) {
+      for (var k in o) {
+        if (typeof o[k] === "string") o[k] = o[k].replace("{titulo_pagina}", titulo);
+        else if (o[k] && typeof o[k] === "object") rellenar(o[k]);
+      }
+    })(pv);
+    var enviado = false;
+    function enviar(region) {
+      if (enviado) return;
+      enviado = true;
+      if (pv.usuario && pv.usuario.region === "{region}") pv.usuario.region = region || "";
+      window["pageName"] = ["pagina", "pageName"].reduce(function (o, k) { return o && o[k]; }, pv);
+      // siempre al dlMetri vigente: el contenedor puede reemplazar el arreglo al cargar (antes o después del push)
+      (window.dlMetri = window.dlMetri || []).push(pv);
+    }
+    var reg = {"servicio": "https://ipapi.co/json/", "timeout_ms": 1500, "codigos": {"cdmx": 9, "merida": 8, "puebla": 7, "queretaro": 6, "guadalajara": 5, "monterrey": 4, "chihuahua": 3, "sonora": 2, "tijuana": 1}, "ciudades": {"ciudad de mexico": "cdmx", "mexico": "cdmx", "mexico city": "cdmx", "cdmx": "cdmx", "merida": "merida", "puebla": "puebla", "queretaro": "queretaro", "guadalajara": "guadalajara", "monterrey": "monterrey", "chihuahua": "chihuahua", "hermosillo": "sonora", "sonora": "sonora", "tijuana": "tijuana"}, "alcaldias": ["azcapotzalco", "coyoacan", "cuajimalpa de morelos", "gustavo a. madero", "iztacalco", "iztapalapa", "la magdalena contreras", "miguel hidalgo", "milpa alta", "tlahuac", "tlalpan", "venustiano carranza", "xochimilco", "benito juarez", "cuauhtemoc", "alvaro obregon"], "alcaldia_a": "cdmx"};
+    if (reg.servicio && window.fetch) {
+      var t = setTimeout(function () { enviar(""); }, reg.timeout_ms || 1500);
+      fetch(reg.servicio).then(function (r) { return r.json(); }).then(function (d) {
+        var c = (d.city || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        c = (reg.ciudades || {})[c] || c;
+        if ((reg.alcaldias || []).indexOf(c) > -1) c = reg.alcaldia_a || c;
+        clearTimeout(t);
+        enviar((reg.codigos || {})[c] || "");
+      }).catch(function () { clearTimeout(t); enviar(""); });
+    } else {
+      enviar("");
+    }
+    var s = document.createElement("script");
+    s.src = "https://assets.adobedtm.com/c4dc318fd160/831cc4904980/launch-65c0e66283aa.min.js";
+    s.async = true;
+    document.head.appendChild(s);
+  })();
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="site-header__logo" href="https://www.telcel.com" aria-label="Telcel">
+      <a data-evento="clicGeneral" data-titulo="Landing|IA|Buen Fin Telcel 2026 Celulares gama alta:Telcel" class="site-header__logo" href="https://www.telcel.com?utm_source=landing&utm_medium=organic&utm_campaign=ia_buen_fin_2026_celulares_gama_alta&utm_content=header_telcel" aria-label="Telcel">
         <img src="../../assets/icons/logo-telcel.svg" width="112" height="32" alt="">
       </a>
     </div>
@@ -193,7 +253,7 @@
         <div class="hero-banner__content">
           <h1 class="hero-banner__title" id="hero-title">Celulares gama alta en oferta este Buen Fin 2026</h1>
           <p class="hero-banner__description">Prepárate para estrenar uno de los mejores celulares gama alta en Buen Fin Telcel</p>
-          <a class="button button__primary hero-banner__cta" href="#celulares-buen-fin">Conoce más</a>
+          <a data-evento="clicGeneral" data-titulo="Landing|IA|Buen Fin Telcel 2026 Celulares gama alta:Conoce más" class="button button__primary hero-banner__cta" href="#celulares-buen-fin">Conoce más</a>
         </div>
       </section>
     </div>
@@ -211,7 +271,7 @@
 
     <section class="products" id="celulares-buen-fin" aria-labelledby="products-title">
       <h2 class="section-title" id="products-title">Las mejores ofertas en celulares gama alta durante este Buen Fin 2026</h2>
-      <content-carousel class="content-carousel" products-url="https://scrapper-tc.up.railway.app/catalog/alta" item-list-schema>
+      <content-carousel class="content-carousel" data-subcategoria="Celulares gama alta" data-utm="utm_source=landing&amp;utm_medium=organic&amp;utm_campaign=ia_buen_fin_2026_celulares_gama_alta&amp;utm_content=carrusel_lo_quiero" products-url="https://scrapper-tc.up.railway.app/catalog/alta" item-list-schema>
         <div class="swiper content-carousel__viewport">
           <div class="swiper-wrapper"></div>
         </div>
@@ -337,8 +397,8 @@
   <footer class="site-footer">
     <div class="site-footer__content">
       <p class="site-footer__copy">©2025 Radiomóvil Dipsa S.A. de C.V. Todos los derechos reservados</p>
-      <a class="site-footer__link" href="#">Términos y condiciones</a>
-      <a class="site-footer__link" href="#">Aviso de privacidad</a>
+      <a data-evento="clicGeneral" data-titulo="Landing|IA|Buen Fin Telcel 2026 Celulares gama alta:Términos y condiciones" class="site-footer__link" href="https://www.telcel.com/terminos-y-condiciones?utm_source=landing&utm_medium=organic&utm_campaign=ia_buen_fin_2026_celulares_gama_alta&utm_content=footer_terminos_y_condiciones">Términos y condiciones</a>
+      <a data-evento="clicGeneral" data-titulo="Landing|IA|Buen Fin Telcel 2026 Celulares gama alta:Aviso de privacidad" class="site-footer__link" href="https://www.telcel.com/aviso-de-privacidad?utm_source=landing&utm_medium=organic&utm_campaign=ia_buen_fin_2026_celulares_gama_alta&utm_content=footer_aviso_de_privacidad">Aviso de privacidad</a>
     </div>
   </footer>
 </body>

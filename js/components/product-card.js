@@ -100,6 +100,7 @@ class ProductCard extends HTMLElement {
 
     const cta = this.field('cta');
     cta.href = this.getAttribute('href') ?? '#';
+    this.track(cta);
     cta.setAttribute('aria-label', `Lo quiero: ${fullName}`);
 
     const compare = this.field('compare');
@@ -114,6 +115,27 @@ class ProductCard extends HTMLElement {
         bubbles: true
       }));
     });
+  }
+
+  // Medición (Adobe Launch, regla clicEquipo): el título se parte por "|" en 11 campos y cada uno cae en su eVar.
+  // Subcategoría y UTMs vienen del <content-carousel> (data-subcategoria, data-utm).
+  track(cta) {
+    const carousel = this.closest('content-carousel');
+    const sku = this.getAttribute('sku') ?? '';
+    const campo = (name) => (this.getAttribute(name) ?? '').trim();
+
+    cta.dataset.evento = 'clicEquipo';
+    cta.dataset.titulo = [
+      'Equipo', carousel?.dataset.subcategoria ?? '', campo('position'), '1', campo('brand'), campo('model'),
+      campo('name'), sku, campo('color'), campo('capacity'), sku
+    ].join('|');
+
+    const utm = carousel?.dataset.utm;
+    if (utm && cta.getAttribute('href') !== '#') {
+      const url = new URL(cta.href);
+      new URLSearchParams(utm).forEach((value, key) => url.searchParams.set(key, value));
+      cta.href = url.href;
+    }
   }
 
   renderSwatches() {

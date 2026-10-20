@@ -1,9 +1,11 @@
 {
-  "_ayuda": "Preset SEO/GEO de Telcel para las landings de campaña de este repo. Lo consume el agente al generar cada landing (seo.mdc). No inventar sameAs.",
+  "_ayuda": "Preset SEO/GEO + enlace a medición de Telcel. Lo consume el agente (seo.mdc, medicion.mdc). No inventar sameAs.",
   "cliente": "Telcel",
   "marca": "Telcel",
   "lang": "es-MX",
   "og_locale": "es_MX",
+  "zona_horaria": "-06:00",
+  "_zona_horaria": "Offset para fechas del SaleEvent (México centro: -06:00).",
   "organizacion": {
     "name": "Telcel",
     "legalName": "Radiomóvil Dipsa, S.A. de C.V.",
@@ -24,6 +26,8 @@
   "webp": false,
   "headings": false,
   "_webp_headings": "Desactivados: este proyecto no convierte imágenes a WebP ni retoca headings (ya son h1–h3 semánticos).",
+  "medicion": "telcel_landings_ia",
+  "_medicion": "Preset homónimo en growth-tracking (capa de datos + UTMs). Requiere la carpeta growth-tracking/ en el repo o ~/.claude/skills/growth-tracking/.",
   "faq": {
     "pregunta": "accordion__question",
     "respuesta": "accordion__answer"

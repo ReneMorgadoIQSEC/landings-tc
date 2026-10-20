@@ -17,7 +17,10 @@ export async function getProducts(url) {
 
   const { products = [] } = await response.json();
 
-  return products.map((product) => toCardAttributes(product, url)).filter(Boolean);
+  return products
+    .map((product) => toCardAttributes(product, url))
+    .filter(Boolean)
+    .map((attributes, index) => ({ ...attributes, position: index + 1 }));
 }
 
 export function createItemList(products) {
@@ -62,6 +65,7 @@ function toCardAttributes(product, serviceUrl) {
     gift: product.includeGift ? '+1 regalo' : null,
     'free-shipping': product.isFreeShipping,
     href: product.pdpUrl,
+    sku: product.code,
     colors: toColors(product.variants)
   };
 }

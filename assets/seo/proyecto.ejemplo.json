@@ -4,6 +4,7 @@
   "marca": "Mi Marca",
   "lang": "es-MX",
   "og_locale": "es_MX",
+  "zona_horaria": "-06:00",
   "organizacion": {
     "name": "",
     "legalName": "",
@@ -19,6 +20,8 @@
   "breadcrumb_inicio": {"name": "Inicio", "url": ""},
   "webp": false,
   "headings": false,
+  "medicion": "",
+  "_medicion": "Nombre del preset en growth-tracking o ruta a su proyecto.json. Vacío = sin medición o mismo nombre que este archivo.",
   "faq": {
     "pregunta": "accordion__question",
     "respuesta": "accordion__answer"
