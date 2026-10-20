@@ -1244,7 +1244,7 @@ img {
   font-family: var(--font_primary);
   color: var(--c_text_informative);
 }
-@media (max-width: 359px) {
+@media (max-width: 414px) {
   .hero-banner__title {
     font-size: var(--size_DS);
     font-weight: var(--fontWeight_medium);
@@ -1268,7 +1268,7 @@ img {
   font-weight: var(--fontWeight_regular);
   color: var(--c_text_black_primary);
 }
-@media (max-width: 359px) {
+@media (max-width: 414px) {
   .hero-banner__description {
     font-size: var(--size_B2);
     font-weight: var(--fontWeight_regular);

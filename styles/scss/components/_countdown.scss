@@ -30,6 +30,8 @@
     display: flex;
     align-items: center;
     gap: $spacing_2xs;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__unit {
