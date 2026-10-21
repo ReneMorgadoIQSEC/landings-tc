@@ -51,7 +51,6 @@ template.innerHTML = `
     <hr class="product-card__divider">
     <div class="product-card__actions">
       <a class="button button__primary product-card__cta" data-field="cta">Lo quiero</a>
-      <button class="button button__link" type="button" data-field="compare">Comparar</button>
     </div>
   </div>
 `;
@@ -102,19 +101,6 @@ class ProductCard extends HTMLElement {
     cta.href = this.getAttribute('href') ?? '#';
     this.track(cta);
     cta.setAttribute('aria-label', `Lo quiero: ${fullName}`);
-
-    const compare = this.field('compare');
-    compare.setAttribute('aria-label', `Comparar ${fullName}`);
-    compare.addEventListener('click', () => {
-      this.dispatchEvent(new CustomEvent('product-compare', {
-        detail: {
-          brand: this.getAttribute('brand'),
-          model: this.getAttribute('model'),
-          name: fullName
-        },
-        bubbles: true
-      }));
-    });
   }
 
   // Medición (Adobe Launch, regla clicEquipo): el título se parte por "|" en 11 campos y cada uno cae en su eVar.
@@ -132,9 +118,19 @@ class ProductCard extends HTMLElement {
 
     const utm = carousel?.dataset.utm;
     if (utm && cta.getAttribute('href') !== '#') {
-      const url = new URL(cta.href);
-      new URLSearchParams(utm).forEach((value, key) => url.searchParams.set(key, value));
-      cta.href = url.href;
+      const conUtm = (query) => {
+        const url = new URL(cta.getAttribute('href'), location.href);
+        new URLSearchParams(query).forEach((value, key) => url.searchParams.set(key, value));
+        return url.href;
+      };
+      // máximo de largo de URL: solo los productos que se pasan bajan de nivel (completo → legible → corto)
+      const maximo = Number(carousel.dataset.utmMax || 250);
+      let href = conUtm(utm);
+      for (const respaldo of [carousel.dataset.utmCorto, carousel.dataset.utmMin]) {
+        if (href.length <= maximo || !respaldo) break;
+        href = conUtm(respaldo);
+      }
+      cta.href = href;
     }
   }
 
