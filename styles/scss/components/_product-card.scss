@@ -36,10 +36,28 @@
     gap: $spacing_2xs;
   }
 
+  &__photo {
+    position: relative;
+    width: 110px;
+    height: 110px;
+  }
+
   &__image {
     width: 110px;
     height: 110px;
     object-fit: cover;
+  }
+
+  // Corcholata (Buen Fin / Hot Sale) sobre la esquina superior izquierda de la foto.
+  &__badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    pointer-events: none;
   }
 
   &__swatches {

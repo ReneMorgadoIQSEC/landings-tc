@@ -47,6 +47,8 @@ function toCardAttributes(product, serviceUrl) {
   const oldPrice = Number(offer.maxPrice?.value);
   const image = product.images?.find(({ format }) => format === 'product') ?? product.images?.[0];
   const tagVariant = Object.keys(TAGS).find((flag) => product[flag]);
+  // Corcholata sobre la foto: Buen Fin tiene prioridad si ambos flags vienen verdaderos.
+  const badge = product.buenFin ? 'buenfin' : (product.hotsale || product.hotSale) ? 'hotsale' : null;
 
   return {
     // Las imágenes llegan relativas al dominio de la tienda, el mismo de pdpUrl.
@@ -66,6 +68,7 @@ function toCardAttributes(product, serviceUrl) {
     'free-shipping': product.isFreeShipping,
     href: product.pdpUrl,
     sku: product.code,
+    badge,
     colors: toColors(product.variants)
   };
 }

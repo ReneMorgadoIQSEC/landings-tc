@@ -1,5 +1,10 @@
 const icon = (name) => new URL(`../../assets/icons/${name}`, import.meta.url).href;
 
+const BADGES = {
+  buenfin: { src: icon('buenfin.png'), alt: 'Buen Fin' },
+  hotsale: { src: icon('telcel-5g.png'), alt: 'Hot Sale' }
+};
+
 const template = document.createElement('template');
 
 template.innerHTML = `
@@ -7,7 +12,10 @@ template.innerHTML = `
     <div class="product-card__media">
       <div class="product-card__visual">
         <span class="tag product-card__tag" data-field="tag"></span>
-        <img class="product-card__image" width="110" height="110" alt="" loading="lazy" data-field="image">
+        <div class="product-card__photo">
+          <img class="product-card__image" width="110" height="110" alt="" loading="lazy" data-field="image">
+          <img class="product-card__badge" width="40" height="40" alt="" loading="lazy" hidden data-field="badge">
+        </div>
       </div>
       <ul class="product-card__swatches" aria-label="Colores disponibles" data-field="swatches"></ul>
     </div>
@@ -92,6 +100,7 @@ class ProductCard extends HTMLElement {
     image.src = this.getAttribute('image');
     image.alt = fullName;
 
+    this.renderBadge();
     this.renderSwatches();
 
     this.field('shipping').hidden = !this.hasAttribute('free-shipping');
@@ -132,6 +141,20 @@ class ProductCard extends HTMLElement {
       }
       cta.href = href;
     }
+  }
+
+  renderBadge() {
+    const badge = BADGES[this.getAttribute('badge')];
+    const el = this.field('badge');
+
+    if (!badge) {
+      el.hidden = true;
+      return;
+    }
+
+    el.src = badge.src;
+    el.alt = badge.alt;
+    el.hidden = false;
   }
 
   renderSwatches() {

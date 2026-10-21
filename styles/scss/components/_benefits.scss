@@ -16,7 +16,7 @@
     list-style: none;
 
     @include media('>tablet') {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(5, minmax(0, 1fr));
     }
   }
 
@@ -29,6 +29,15 @@
     border-radius: $radius_s;
     background-color: $c_backgrounds_white;
     text-align: center;
+
+    // Figma móvil aún no incluye el 5.º; en 2 columnas se centra la última fila impar.
+    &:last-child:nth-child(odd) {
+      @include media('<tablet') {
+        grid-column: 1 / -1;
+        width: calc((100% - #{$spacing_sm}) / 2);
+        justify-self: center;
+      }
+    }
   }
 
   &__icon {
